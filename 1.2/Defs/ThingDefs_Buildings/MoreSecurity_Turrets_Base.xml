@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!--===================================================================== Bases 1 =====================================================================-->
+  <!-- Base -->
+  <ThingDef ParentName="BuildingBase" Name="SE_MS_TurretBuildingBase" Abstract="True">
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <uiIconScale>0.90</uiIconScale>
+    <stealable>false</stealable>
+    <tradeability>None</tradeability>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <hasTooltip>true</hasTooltip>
+    <designationCategory>Security</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+  </ThingDef>
+  <!-- Bullet -->
+  <ThingDef ParentName="BaseBullet" Name="SE_MS_BaseBullet" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+    </projectile>
+  </ThingDef>
+  <!-- Gun -->
+  <ThingDef ParentName="BaseWeaponTurret" Name="SE_MS_TurretBaseGun" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
+  <!--===================================================================== Bases 2 =====================================================================-->
+  <!-- Uranium Base -->
+  <ThingDef ParentName="SE_MS_TurretBuildingBase" Name="SE_MS_UraniumTurretBuildingBase" Abstract="True">
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretHeavy_Base</texPath>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <size>(2,2)</size>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.9</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <turretTopDrawSize>2.7</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+      <uninstallWork>12000</uninstallWork>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <uiIconScale>0.95</uiIconScale>
+    <tradeability>None</tradeability>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <designationCategory>Security</designationCategory>
+  </ThingDef>
+  <!-- Uranium Bullet -->
+  <ThingDef ParentName="SE_MS_BaseBullet" Name="SE_MS_UraniumTurretBulletBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+  </ThingDef>
+  <!-- Uranium Gun -->
+  <ThingDef ParentName="SE_MS_TurretBaseGun" Name="SE_MS_UraniumTurretGunBase" Abstract="True">
+    <graphicData>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+  </ThingDef>
+  <!-- Minigun Base -->
+  <ThingDef ParentName="SE_MS_TurretBuildingBase" Name="SE_MS_MinigunTurretBuildingBase" Abstract="True">
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <drawSize>(2.85,2.9)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1,0.5,1)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <castEdgeShadows>false</castEdgeShadows>
+    <size>(2,2)</size>
+    <fillPercent>0.9</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <building>
+      <uninstallWork>12000</uninstallWork>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <tradeability>None</tradeability>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <designationCategory>Security</designationCategory>
+  </ThingDef>
+  <!-- Minigun Turret -->
+  <ThingDef ParentName="BaseWeaponTurret" Name="SE_MS_MinigunTurretBuildingGun" Abstract="True">
+    <soundInteract>Interact_Rifle</soundInteract>
+  </ThingDef>
+</Defs>

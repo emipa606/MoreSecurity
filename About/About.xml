@@ -1,35 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>More Security</name>
-	<author>Squirting Elephant</author>
-	<supportedVersions>
-		<li>1.1</li>
-		<li>1.2</li>
-	</supportedVersions>
-	<packageId>SquirtingElephant.MoreSecurity</packageId>
-	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-	</loadAfter>
-	<description>Adds more turrets and traps.
+  <name>More Security (Continued)</name>
+  <packageId>Mlie.MoreSecurity</packageId>
+  <author>Squirting Elephant</author>
+  <url>https://github.com/emipa606/MoreSecurity</url>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of Squirting Elephants mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2008457868
 
-Technical details:
-- Is mostly XML but uses some C# for configuring this mods settings. Source is included.
-- Can safely be added to an existing game.
-- When removing from an existing game, please make sure that you destroyed all structures from this mod first.
-- Is translation-ready.
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-New Buildings:
-- Shotgun Turret.
-- Flamethrower turret.
-- Hi-tech uranium turret (and its MKII variant).
-- Hi-tech minigun turret (and its MKII variant).
-- Traps MKII.
-- Reinforced sandbags.
-- Plasteel reinforced sandbags.
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/MoreSecurity][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+Adds more turrets, traps and sandbags.
 
-New Researches:
-- Gun Turrets MKII, MKIII, MKIV, Traps MKII.
+[h1]Technical details:[/h1]
+[list]
+[*]Is mostly XML but uses some C# for configuring this mods settings. Source is included. Has [b]no[/b] dependencies (like Harmony or HugsLib).
+[*]Can safely be added to an existing game.
+[*]When removing from an existing game, please make sure that you destroyed all structures from this mod first.
+[*]Translation ready.
+[/list]
+
+[h1]New Buildings:[/h1]
+[list]
+[*]Shotgun Turret (doesn&apos;t explode).
+[*]Flamethrower turret.
+[*]Hi-tech uranium turret (and its MKII variant).
+[*]Hi-tech minigun turret (and its MKII variant).
+[*]Traps MKII.
+[*]Reinforced sandbags.
+[*]Plasteel reinforced sandbags.
+[/list]
+
+[h1]New Research:[/h1]
+Gun Turrets MKII, MKIII, MKIV, Traps MKII.
+
+[H1]Extra Credits[/H1]
+[list]
+[*]Credits for the Flamethrower Turret go to: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1501413120&amp;searchtext=flamethrower]czpetr &quot;[1.0] Flamethrower + turret&quot;[/url].
+[*]The turret textures made by mrqwer4.
+[/list]
 
 
-Credits for the Flamethrower Turret go to czpetr "[1.0] Flamethrower + turret".</description>
+[url=https://ko-fi.com/elephant][img]https://i.imgur.com/UEq4O06.png[/img][/url]
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>More Security</name>
+  <author>Squirting Elephant</author>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <packageId>SquirtingElephant.MoreSecurity</packageId>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+  </loadAfter>
+  <description>Adds more turrets and traps.
+
+Technical details:
+- Is mostly XML but uses some C# for configuring this mods settings. Source is included.
+- Can safely be added to an existing game.
+- When removing from an existing game, please make sure that you destroyed all structures from this mod first.
+- Is translation-ready.
+
+New Buildings:
+- Shotgun Turret.
+- Flamethrower turret.
+- Hi-tech uranium turret (and its MKII variant).
+- Hi-tech minigun turret (and its MKII variant).
+- Traps MKII.
+- Reinforced sandbags.
+- Plasteel reinforced sandbags.
+
+New Researches:
+- Gun Turrets MKII, MKIII, MKIV, Traps MKII.
+
+
+Credits for the Flamethrower Turret go to czpetr "[1.0] Flamethrower + turret".</description>
+</ModMetaData>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <DesignatorDropdownGroupDef>
+    <defName>MoreSecuritySandbags</defName>
+  </DesignatorDropdownGroupDef>
+  <!--===================================================================== Base =====================================================================-->
+  <ThingDef ParentName="BuildingBase" Name="SE_MS_SandbagsBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <designatorDropdown>MoreSecuritySandbags</designatorDropdown>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Sandbags</li>
+      </linkFlags>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>40</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.65</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Sandbags_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <filthLeaving>SandbagRubble</filthLeaving>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <constructEffect>ConstructDirt</constructEffect>
+    <repairEffect>ConstructDirt</repairEffect>
+  </ThingDef>
+  <!--===================================================================== Sandbags MKII =====================================================================-->
+  <ThingDef ParentName="SE_MS_SandbagsBase">
+    <defName>Sandbags_MKII</defName>
+    <label>reinforced sandbags</label>
+    <description>Bags of locally-sourced dirt or sand held in place by strong steel rods. More durable than regular sandbags.</description>
+    <graphicData>
+      <texPath>Sandbags/Sandbags_Atlas_MK2</texPath>
+    </graphicData>
+    <uiIconPath>Sandbags/Sandbags_MenuIcon_MK2</uiIconPath>
+    <uiIconColor>(139,122,87)</uiIconColor>
+    <statBases>
+      <MaxHitPoints>675</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <WorkToBuild>1120</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Cloth>7</Cloth>
+      <Steel>7</Steel>
+    </costList>
+  </ThingDef>
+  <!--===================================================================== Sandbags MKIII =====================================================================-->
+  <ThingDef ParentName="SE_MS_SandbagsBase">
+    <defName>Sandbags_MKIII</defName>
+    <label>plasteel reinforced sandbags</label>
+    <description>Bags of locally-sourced dirt or sand held in place by plasteel rods. More durable than the steel reinforced sandbags.</description>
+    <graphicData>
+      <texPath>Sandbags/Sandbags_Atlas_MK3</texPath>
+    </graphicData>
+    <uiIconPath>Sandbags/Sandbags_MenuIcon_MK3</uiIconPath>
+    <uiIconColor>(139,122,87)</uiIconColor>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <WorkToBuild>1600</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Cloth>7</Cloth>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </ThingDef>
+  <!--===================================================================== End =====================================================================-->
+</Defs>

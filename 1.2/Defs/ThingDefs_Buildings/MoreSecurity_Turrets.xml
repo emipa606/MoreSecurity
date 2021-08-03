@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <DesignatorDropdownGroupDef>
+    <defName>MoreSecurity_SniperTurrets</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>MoreSecurity_MinigunTurrets</defName>
+  </DesignatorDropdownGroupDef>
+  <!--===================================================================== Shotgun Turret =====================================================================-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_TurretBuildingBase">
+    <defName>SE_ShotgunTurret</defName>
+    <label>shotgun Turret</label>
+    <description>A tough shortrange turret that does not explode.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Base</texPath>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>IndoorTurret_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>425</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>7000</WorkToBuild>
+      <Mass>10</Mass>
+      <Beauty>-5</Beauty>
+      <ShootingAccuracyTurret>0.95</ShootingAccuracyTurret>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>80</basePowerConsumption>
+      </li>
+    </comps>
+    <fillPercent>0.4</fillPercent>
+    <costList>
+      <Steel>225</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <turretGunDef>Gun_IndoorTurret</turretGunDef>
+      <turretBurstCooldownTime>5</turretBurstCooldownTime>
+      <turretTopDrawSize>1.3</turretTopDrawSize>
+    </building>
+    <researchPrerequisites>
+      <li>MoreTurretsMKII</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- Bullet -->
+  <ThingDef ParentName="SE_MS_BaseBullet">
+    <defName>Bullet_SE_ShotgunTurret</defName>
+    <label>shotgun round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+  <!-- Gun -->
+  <ThingDef ParentName="SE_MS_TurretBaseGun">
+    <defName>Gun_IndoorTurret</defName>
+    <label>indoor-turret gun</label>
+    <description>A simple automatic gun made to be mounted on a turret.</description>
+    <graphicData>
+      <texPath>IndoorTurret_Top</texPath>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SE_ShotgunTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>7</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--=============== Flamethrower Turret ===============-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_TurretBuildingBase">
+    <defName>SE_Turret_FlamethrowerTurret</defName>
+    <label>flamethrower turret</label>
+    <description>A portable flamethrower automatic turret. Must be refueled after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Base</texPath>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>TurretFlamethrower_MenuIcon</uiIconPath>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>10</Mass>
+      <Beauty>-10</Beauty>
+      <ShootingAccuracyTurret>0.90</ShootingAccuracyTurret>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.1</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>chemfuel</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>30</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.75</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>3</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Needs chemfuel</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <fillPercent>0.4</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <turretGunDef>SE_Gun_FlamethrowerTurretGun</turretGunDef>
+      <turretBurstCooldownTime>6</turretBurstCooldownTime>
+      <turretTopDrawSize>1.0</turretTopDrawSize>
+    </building>
+    <researchPrerequisites>
+      <li>MoreTurretsMKII</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- Flamethrower Bullet -->
+  <ThingDef ParentName="SE_MS_BaseBullet">
+    <defName>SE_Bullet_Flamethrower</defName>
+    <label>napalm</label>
+    <graphicData>
+      <texPath>FlamethrowerShot</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>55</speed>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <explosionRadius>0.5</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <!-- Flamethrower Gun -->
+  <ThingDef ParentName="SE_MS_TurretBaseGun">
+    <defName>SE_Gun_FlamethrowerTurretGun</defName>
+    <label>flamethrower turret gun</label>
+    <description>Flamethrower made to be mounted on a turret.</description>
+    <graphicData>
+      <texPath>TurretFlamethrower_Top</texPath>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.35</AccuracyTouch>
+      <AccuracyShort>0.20</AccuracyShort>
+      <AccuracyMedium>0.08</AccuracyMedium>
+      <AccuracyLong>0.02</AccuracyLong>
+      <RangedWeapon_Cooldown>6.00</RangedWeapon_Cooldown>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SE_Bullet_Flamethrower</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>15</range>
+        <forcedMissRadius>2.5</forcedMissRadius>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <consumeFuelPerShot>0.05</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--=============== Hi-Tech Uranium turret ===============-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_UraniumTurretBuildingBase">
+    <defName>Turret_SniperMKII</defName>
+    <label>hi-tech uranium slug turret</label>
+    <description>A long-ranged armor-piercing turret. This hi-tech version has a lower explosion chance, smaller explosion radius, more accuracy, more damage and extreme armor penetration but fires a bit slower and is weak against hoardes of enemies and very weak at close range. Requires no barrel replacement. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</description>
+    <uiIconPath>TurretSniperMK2_MenuIcon</uiIconPath>
+    <statBases>
+      <ShootingAccuracyTurret>0.998</ShootingAccuracyTurret>
+      <Flammability>0.7</Flammability>
+      <Mass>100</Mass>
+      <MaxHitPoints>825</MaxHitPoints>
+      <WorkToBuild>7000</WorkToBuild>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <costList>
+      <Steel>975</Steel>
+      <Plasteel>90</Plasteel>
+      <Uranium>120</Uranium>
+      <Gold>35</Gold>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.0</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.8</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>900</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building>
+      <turretGunDef>Gun_TurretSniperMKII</turretGunDef>
+      <turretBurstCooldownTime>5.0</turretBurstCooldownTime>
+      <turretTopDrawSize>2.8</turretTopDrawSize>
+    </building>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>MoreTurretsMKIII</li>
+    </researchPrerequisites>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+  </ThingDef>
+  <!-- Uranium Bullet -->
+  <ThingDef ParentName="SE_MS_UraniumTurretBulletBase">
+    <defName>Bullet_TurretSniperMKII</defName>
+    <label>hi-tech uranium slug</label>
+    <projectile>
+      <damageAmountBase>175</damageAmountBase>
+      <speed>165</speed>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+    </projectile>
+  </ThingDef>
+  <!-- Uranium Gun -->
+  <ThingDef ParentName="SE_MS_UraniumTurretGunBase">
+    <defName>Gun_TurretSniperMKII</defName>
+    <label>hi-tech uranium slug cannon</label>
+    <description>A self-loading hi-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</description>
+    <graphicData>
+      <texPath>TurretSniperMK2_Top</texPath>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.985</AccuracyLong>
+      <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretSniperMKII</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>11.9</minRange>
+        <range>49.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniperMKII</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--=============== Ultra-Tech Uranium turret ===============-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_UraniumTurretBuildingBase">
+    <defName>Turret_SniperMKIII</defName>
+    <label>ultra-tech uranium slug turret</label>
+    <description>A long-ranged armor-piercing turret. This ultra-tech version fires faster, harder, never breaks down and is tougher compared to the hi-tech version and does not explode but this version does require barrel replacements. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</description>
+    <uiIconPath>TurretSniperMK3_MenuIcon</uiIconPath>
+    <statBases Inherit="False">
+      <ShootingAccuracyTurret>0.998</ShootingAccuracyTurret>
+      <Flammability>0.7</Flammability>
+      <Mass>100</Mass>
+      <MaxHitPoints>1550</MaxHitPoints>
+      <WorkToBuild>21000</WorkToBuild>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <costList Inherit="False">
+      <Steel>3550</Steel>
+      <Plasteel>360</Plasteel>
+      <Uranium>480</Uranium>
+      <Gold>125</Gold>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until rearm</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>20</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.75</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>2.0</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Needs rearm</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <building>
+      <turretGunDef>Gun_TurretSniperMKIII</turretGunDef>
+      <turretBurstCooldownTime>2.0</turretBurstCooldownTime>
+      <turretTopDrawSize>3.2</turretTopDrawSize>
+    </building>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>MoreTurretsMKIV</li>
+    </researchPrerequisites>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+  </ThingDef>
+  <!-- Uranium MKII Bullet -->
+  <ThingDef ParentName="SE_MS_UraniumTurretBulletBase">
+    <defName>Bullet_TurretSniperMKIII</defName>
+    <label>ultra-tech uranium slug</label>
+    <projectile>
+      <damageAmountBase>525</damageAmountBase>
+      <speed>160</speed>
+      <armorPenetrationBase>1.0</armorPenetrationBase>
+      <stoppingPower>12</stoppingPower>
+    </projectile>
+  </ThingDef>
+  <!-- Uranium MKII Gun -->
+  <ThingDef ParentName="SE_MS_UraniumTurretGunBase">
+    <defName>Gun_TurretSniperMKIII</defName>
+    <label>ultra-tech uranium slug cannon</label>
+    <description>A self-loading ultra-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</description>
+    <graphicData>
+      <texPath>TurretSniperMK3_Top</texPath>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.4</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.99</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>120</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_TurretSniperMKIII</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>49.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_TurretSniperMKII</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--===================================== Minigun Turret MKI =====================================-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_MinigunTurretBuildingBase">
+    <defName>HT_MinigunTurret</defName>
+    <label>hi-tech Minigun Turret</label>
+    <description>A large strong Minigun turret. Its accuracy and armor penetration are horrible and it has no stopping power but it's great at dealing with large packs of enemies. Beware of friendly fire.</description>
+    <graphicData>
+      <texPath>MinigunTurretMKI/MinigunTurretMKI_Base</texPath>
+    </graphicData>
+    <uiIconPath>MinigunTurretMKI/MinigunTurretMKI_Icon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>1100</MaxHitPoints>
+      <Flammability>0.05</Flammability>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>600</Mass>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>4</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>900</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(217,217,180,0)</glowColor>
+      </li>
+    </comps>
+    <costList>
+      <Steel>600</Steel>
+      <Plasteel>100</Plasteel>
+      <Gold>50</Gold>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <building>
+      <turretGunDef>HT_MinigunTurret_Gun</turretGunDef>
+      <turretBurstCooldownTime>2</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MoreTurretsMKIII</li>
+    </researchPrerequisites>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+  </ThingDef>
+  <!-- Minigun Bullet -->
+  <ThingDef ParentName="SE_MS_BaseBullet">
+    <defName>HT_MinigunTurret_Bullet</defName>
+    <label>Minigun Turret Round</label>
+    <graphicData>
+      <texPath>MinigunTurretMKI/MinigunTurretShellMKI</texPath>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>130</speed>
+      <stoppingPower>0</stoppingPower>
+      <armorPenetrationBase>0</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+  <!-- Minigun Gun -->
+  <ThingDef ParentName="SE_MS_MinigunTurretBuildingGun">
+    <defName>HT_MinigunTurret_Gun</defName>
+    <label>hi-tech Minigun Turret</label>
+    <description>A Hi-tech Minigun for a hi-tech minigun turret.</description>
+    <graphicData>
+      <texPath>MinigunTurretMKI/MinigunTurretMKI</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>55</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.15</AccuracyMedium>
+      <AccuracyLong>0.07</AccuracyLong>
+      <RangedWeapon_Cooldown>0.001</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HT_MinigunTurret_Bullet</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>48</range>
+        <minRange>0</minRange>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>100</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--===================================== Minigun Turret MKII =====================================-->
+  <!-- Base -->
+  <ThingDef ParentName="SE_MS_MinigunTurretBuildingBase">
+    <defName>HT_MinigunTurretMKII</defName>
+    <label>hi-tech Minigun Turret MKII</label>
+    <description>A very large strong Minigun turret. Its accuracy is horrible, has good stopping power but its armor penetration is meh but it excells at dealing with large packs of enemies. Does not explode upon destruction. Beware of friendly fire.</description>
+    <graphicData>
+      <texPath>MinigunTurretMKII/MinigunTurretMKII_Base</texPath>
+    </graphicData>
+    <uiIconPath>MinigunTurretMKII/MinigunTurretMKII_Icon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>1600</MaxHitPoints>
+      <Flammability>0.05</Flammability>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>900</Mass>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(217,217,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until rearm</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>250</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.90</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>0.65</fuelMultiplier>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Cannot shoot: Needs rearm</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <costList>
+      <Steel>1200</Steel>
+      <Plasteel>300</Plasteel>
+      <Gold>450</Gold>
+      <ComponentIndustrial>15</ComponentIndustrial>
+      <ComponentSpacer>12</ComponentSpacer>
+    </costList>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+    <building>
+      <turretGunDef>HT_MinigunTurret_GunMKII</turretGunDef>
+      <turretBurstCooldownTime>2</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MoreTurretsMKIV</li>
+    </researchPrerequisites>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+  </ThingDef>
+  <!-- Minigun MKII Bullet -->
+  <ThingDef ParentName="SE_MS_BaseBullet">
+    <defName>HT_MinigunTurret_BulletMKII</defName>
+    <label>minigun Turret Round</label>
+    <graphicData>
+      <texPath>MinigunTurretMKII/MinigunTurretShellMKII</texPath>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>130</speed>
+      <stoppingPower>1</stoppingPower>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+  <!-- Minigun MKII Gun -->
+  <ThingDef ParentName="SE_MS_MinigunTurretBuildingGun">
+    <defName>HT_MinigunTurret_GunMKII</defName>
+    <label>Minigun Turret</label>
+    <description>A hi-tech minigun for a hi-tech minigun turret.</description>
+    <graphicData>
+      <texPath>MinigunTurretMKII/MinigunTurretMKII</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>55</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.3</AccuracyShort>
+      <AccuracyMedium>0.15</AccuracyMedium>
+      <AccuracyLong>0.07</AccuracyLong>
+      <RangedWeapon_Cooldown>0.001</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HT_MinigunTurret_BulletMKII</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>48</range>
+        <minRange>0</minRange>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>200</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <consumeFuelPerShot>0.015</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!--===================================== End =====================================-->
+</Defs>

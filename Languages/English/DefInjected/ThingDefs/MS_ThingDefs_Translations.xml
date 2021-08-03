@@ -1,52 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-	<!-- Traps -->
-	<TrapSpikeMKII.label>spike trap MKII</TrapSpikeMKII.label>
-	<TrapSpikeMKII.description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forthm and strike the victim. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. Has 2.75x the damage and 3x the hitpoints and a bit less ugly compared to a regular trap but is 4x as expensive to build.</TrapSpikeMKII.description>
-
-	<!-- Turrets -->
-	<SE_ShotgunTurret.label>shotgun Turret</SE_ShotgunTurret.label>
-	<SE_ShotgunTurret.description>A tough shortrange turret that does not explode.</SE_ShotgunTurret.description>
-	<Bullet_SE_ShotgunTurret.label>shotgun round</Bullet_SE_ShotgunTurret.label>
-	<Gun_IndoorTurret.label>indoor-turret gun</Gun_IndoorTurret.label>
-	<Gun_IndoorTurret.description>A simple automatic gun made to be mounted on a turret.</Gun_IndoorTurret.description>
-	
-	<SE_Turret_FlamethrowerTurret.label>flamethrower turret</SE_Turret_FlamethrowerTurret.label>
-	<SE_Turret_FlamethrowerTurret.description>A portable flamethrower automatic turret. Must be refueled after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</SE_Turret_FlamethrowerTurret.description>
-	<SE_Bullet_Flamethrower.label>napalm</SE_Bullet_Flamethrower.label>
-	<SE_Gun_FlamethrowerTurretGun.label>flamethrower turret gun</SE_Gun_FlamethrowerTurretGun.label>
-	<SE_Gun_FlamethrowerTurretGun.description>Flamethrower made to be mounted on a turret.</SE_Gun_FlamethrowerTurretGun.description>
-	
-	<Turret_SniperMKII.label>hi-tech uranium slug turret</Turret_SniperMKII.label>
-	<Turret_SniperMKII.description>A long-ranged armor-piercing turret. This hi-tech version has a lower explosion chance, smaller explosion radius, more accuracy, more damage and extreme armor penetration but fires a bit slower and is weak against hoardes of enemies and very weak at close range. Requires no barrel replacement. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</Turret_SniperMKII.description>
-	<Bullet_TurretSniperMKII.label>hi-tech uranium slug</Bullet_TurretSniperMKII.label>
-	<Gun_TurretSniperMKII.label>hi-tech uranium slug cannon</Gun_TurretSniperMKII.label>
-	<Gun_TurretSniperMKII.description>A self-loading hi-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</Gun_TurretSniperMKII.description>
-	
-	<Turret_SniperMKIII.label>ultra-tech uranium slug turret</Turret_SniperMKIII.label>
-	<Turret_SniperMKIII.description>A long-ranged armor-piercing turret. This ultra-tech version fires faster, harder, never breaks down and is tougher compared to the hi-tech version and does not explode but this version does require barrel replacements. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</Turret_SniperMKIII.description>
-	<Bullet_TurretSniperMKIII.label>ultra-tech uranium slug</Bullet_TurretSniperMKIII.label>
-	<Gun_TurretSniperMKIII.label>ultra-tech uranium slug cannon</Gun_TurretSniperMKIII.label>
-	<Gun_TurretSniperMKIII.description>A self-loading ultra-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</Gun_TurretSniperMKIII.description>
-	
-	<HT_MinigunTurret.label>hi-tech Minigun Turret</HT_MinigunTurret.label>
-	<HT_MinigunTurret.description>A large strong Minigun turret. Its accuracy and armor penetration are horrible and it has no stopping power but it's great at dealing with large packs of enemies. Beware of friendly fire.</HT_MinigunTurret.description>
-	<HT_MinigunTurret_Bullet.label>Minigun Turret Round</HT_MinigunTurret_Bullet.label>
-	<HT_MinigunTurret_Gun.label>hi-tech Minigun Turret</HT_MinigunTurret_Gun.label>
-	<HT_MinigunTurret_Gun.description>A Hi-tech Minigun for a hi-tech minigun turret.</HT_MinigunTurret_Gun.description>
-
-	<HT_MinigunTurretMKII.label>hi-tech Minigun Turret MKII</HT_MinigunTurretMKII.label>
-	<HT_MinigunTurretMKII.description>A very large strong Minigun turret. Its accuracy is horrible, has good stopping power but its armor penetration is meh but it excells at dealing with large packs of enemies. Does not explode upon destruction. Beware of friendly fire.</HT_MinigunTurretMKII.description>
-	<HT_MinigunTurret_BulletMKII.label>minigun Turret Round</HT_MinigunTurret_BulletMKII.label>
-	<HT_MinigunTurret_GunMKII.label>hi-tech Minigun Turret</HT_MinigunTurret_GunMKII.label>
-	<HT_MinigunTurret_GunMKII.description>A hi-tech minigun for a hi-tech minigun turret.</HT_MinigunTurret_GunMKII.description>
-	
-	<!-- Sandbags -->
-	<Sandbags_MKII.label>reinforced sandbags</Sandbags_MKII.label>
-	<Sandbags_MKII.description>Bags of locally-sourced dirt or sand held in place by strong steel rods. More durable than regular sandbags.</Sandbags_MKII.description>
-	
-	<Sandbags_MKIII.label>plasteel reinforced sandbags</Sandbags_MKIII.label>
-	<Sandbags_MKIII.description>Bags of locally-sourced dirt or sand held in place by plasteel rods. More durable than the steel reinforced sandbags</Sandbags_MKIII.description>
-	
+  <!-- Traps -->
+  <TrapSpikeMKII.label>spike trap MKII</TrapSpikeMKII.label>
+  <TrapSpikeMKII.description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forthm and strike the victim. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. Has 2.75x the damage and 3x the hitpoints and a bit less ugly compared to a regular trap but is 4x as expensive to build.</TrapSpikeMKII.description>
+  <!-- Turrets -->
+  <SE_ShotgunTurret.label>shotgun Turret</SE_ShotgunTurret.label>
+  <SE_ShotgunTurret.description>A tough shortrange turret that does not explode.</SE_ShotgunTurret.description>
+  <Bullet_SE_ShotgunTurret.label>shotgun round</Bullet_SE_ShotgunTurret.label>
+  <Gun_IndoorTurret.label>indoor-turret gun</Gun_IndoorTurret.label>
+  <Gun_IndoorTurret.description>A simple automatic gun made to be mounted on a turret.</Gun_IndoorTurret.description>
+  <SE_Turret_FlamethrowerTurret.label>flamethrower turret</SE_Turret_FlamethrowerTurret.label>
+  <SE_Turret_FlamethrowerTurret.description>A portable flamethrower automatic turret. Must be refueled after heavy use. May explode when damaged. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</SE_Turret_FlamethrowerTurret.description>
+  <SE_Bullet_Flamethrower.label>napalm</SE_Bullet_Flamethrower.label>
+  <SE_Gun_FlamethrowerTurretGun.label>flamethrower turret gun</SE_Gun_FlamethrowerTurretGun.label>
+  <SE_Gun_FlamethrowerTurretGun.description>Flamethrower made to be mounted on a turret.</SE_Gun_FlamethrowerTurretGun.description>
+  <Turret_SniperMKII.label>hi-tech uranium slug turret</Turret_SniperMKII.label>
+  <Turret_SniperMKII.description>A long-ranged armor-piercing turret. This hi-tech version has a lower explosion chance, smaller explosion radius, more accuracy, more damage and extreme armor penetration but fires a bit slower and is weak against hoardes of enemies and very weak at close range. Requires no barrel replacement. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</Turret_SniperMKII.description>
+  <Bullet_TurretSniperMKII.label>hi-tech uranium slug</Bullet_TurretSniperMKII.label>
+  <Gun_TurretSniperMKII.label>hi-tech uranium slug cannon</Gun_TurretSniperMKII.label>
+  <Gun_TurretSniperMKII.description>A self-loading hi-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</Gun_TurretSniperMKII.description>
+  <Turret_SniperMKIII.label>ultra-tech uranium slug turret</Turret_SniperMKIII.label>
+  <Turret_SniperMKIII.description>A long-ranged armor-piercing turret. This ultra-tech version fires faster, harder, never breaks down and is tougher compared to the hi-tech version and does not explode but this version does require barrel replacements. Warning: do NOT stand anywhere in front of this turret when it fires (it could miss...).</Turret_SniperMKIII.description>
+  <Bullet_TurretSniperMKIII.label>ultra-tech uranium slug</Bullet_TurretSniperMKIII.label>
+  <Gun_TurretSniperMKIII.label>ultra-tech uranium slug cannon</Gun_TurretSniperMKIII.label>
+  <Gun_TurretSniperMKIII.description>A self-loading ultra-tech cannon designed to attach to a turret. Precise at range, it's not good at tracking close targets.</Gun_TurretSniperMKIII.description>
+  <HT_MinigunTurret.label>hi-tech Minigun Turret</HT_MinigunTurret.label>
+  <HT_MinigunTurret.description>A large strong Minigun turret. Its accuracy and armor penetration are horrible and it has no stopping power but it's great at dealing with large packs of enemies. Beware of friendly fire.</HT_MinigunTurret.description>
+  <HT_MinigunTurret_Bullet.label>Minigun Turret Round</HT_MinigunTurret_Bullet.label>
+  <HT_MinigunTurret_Gun.label>hi-tech Minigun Turret</HT_MinigunTurret_Gun.label>
+  <HT_MinigunTurret_Gun.description>A Hi-tech Minigun for a hi-tech minigun turret.</HT_MinigunTurret_Gun.description>
+  <HT_MinigunTurretMKII.label>hi-tech Minigun Turret MKII</HT_MinigunTurretMKII.label>
+  <HT_MinigunTurretMKII.description>A very large strong Minigun turret. Its accuracy is horrible, has good stopping power but its armor penetration is meh but it excells at dealing with large packs of enemies. Does not explode upon destruction. Beware of friendly fire.</HT_MinigunTurretMKII.description>
+  <HT_MinigunTurret_BulletMKII.label>minigun Turret Round</HT_MinigunTurret_BulletMKII.label>
+  <HT_MinigunTurret_GunMKII.label>hi-tech Minigun Turret</HT_MinigunTurret_GunMKII.label>
+  <HT_MinigunTurret_GunMKII.description>A hi-tech minigun for a hi-tech minigun turret.</HT_MinigunTurret_GunMKII.description>
+  <!-- Sandbags -->
+  <Sandbags_MKII.label>reinforced sandbags</Sandbags_MKII.label>
+  <Sandbags_MKII.description>Bags of locally-sourced dirt or sand held in place by strong steel rods. More durable than regular sandbags.</Sandbags_MKII.description>
+  <Sandbags_MKIII.label>plasteel reinforced sandbags</Sandbags_MKIII.label>
+  <Sandbags_MKIII.description>Bags of locally-sourced dirt or sand held in place by plasteel rods. More durable than the steel reinforced sandbags</Sandbags_MKIII.description>
 </LanguageData>
