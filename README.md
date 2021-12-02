@@ -1,14 +1,14 @@
 # MoreSecurity
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Squirting Elephants mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2008457868
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 Adds more turrets, traps and sandbags.
 
@@ -27,7 +27,7 @@ Adds more turrets, traps and sandbags.
 
 
 
-- Shotgun Turret (doesn&apos;t explode).
+- Shotgun Turret (doesn't explode).
 - Flamethrower turret.
 - Hi-tech uranium turret (and its MKII variant).
 - Hi-tech minigun turret (and its MKII variant).
@@ -44,16 +44,13 @@ Gun Turrets MKII, MKIII, MKIV, Traps MKII.
 [H1]Extra Credits[/H1]
 
 
-- Credits for the Flamethrower Turret go to: https://steamcommunity.com/sharedfiles/filedetails/?id=1501413120&amp;searchtext=flamethrower]czpetr &quot;[1.0] Flamethrower + turret&quot;.
+- Credits for the Flamethrower Turret go to: https://steamcommunity.com/sharedfiles/filedetails/?id=1501413120]czpetr "[1.0] Flamethrower + turret".
 - The turret textures made by mrqwer4.
 
 
 
 
-https://ko-fi.com/elephant]![Image](https://i.imgur.com/UEq4O06.png)
-
-
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 

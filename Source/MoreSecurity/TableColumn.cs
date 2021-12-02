@@ -1,35 +1,34 @@
 ﻿using Verse;
 
-namespace SquirtingElephant.Helpers
+namespace SquirtingElephant.Helpers;
+
+public class TableColumn : TableEntity
 {
-    public class TableColumn : TableEntity
+    private float _Width;
+
+    public TableColumn(TableData tableData, float width) : base(tableData)
     {
-        private float _Width;
+        Width = width;
+    }
 
-        public TableColumn(TableData tableData, float width) : base(tableData)
+    public float Width
+    {
+        get => _Width;
+        set
         {
-            Width = width;
-        }
-
-        public float Width
-        {
-            get => _Width;
-            set
+            if (value == _Width)
             {
-                if (value == _Width)
-                {
-                    return;
-                }
+                return;
+            }
 
-                if (value > 0f)
-                {
-                    _Width = value;
-                    TableData.Update();
-                }
-                else
-                {
-                    Log.Error($"TableRow received a value of {value} for its Height.");
-                }
+            if (value > 0f)
+            {
+                _Width = value;
+                TableData.Update();
+            }
+            else
+            {
+                Log.Error($"TableRow received a value of {value} for its Height.");
             }
         }
     }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>More Security (Continued)</name>
   <packageId>Mlie.MoreSecurity</packageId>
@@ -11,11 +11,11 @@
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of Squirting Elephants mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2008457868
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
     [tr]
@@ -24,7 +24,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2008457868
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 Adds more turrets, traps and sandbags.
 
 [h1]Technical details:[/h1]
@@ -37,7 +37,7 @@ Adds more turrets, traps and sandbags.
 
 [h1]New Buildings:[/h1]
 [list]
-[*]Shotgun Turret (doesn&apos;t explode).
+[*]Shotgun Turret (doesn't explode).
 [*]Flamethrower turret.
 [*]Hi-tech uranium turret (and its MKII variant).
 [*]Hi-tech minigun turret (and its MKII variant).
@@ -51,14 +51,12 @@ Gun Turrets MKII, MKIII, MKIV, Traps MKII.
 
 [H1]Extra Credits[/H1]
 [list]
-[*]Credits for the Flamethrower Turret go to: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1501413120&amp;searchtext=flamethrower]czpetr &quot;[1.0] Flamethrower + turret&quot;[/url].
+[*]Credits for the Flamethrower Turret go to: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1501413120]czpetr "[1.0] Flamethrower + turret"[/url].
 [*]The turret textures made by mrqwer4.
 [/list]
 
 
-[url=https://ko-fi.com/elephant][img]https://i.imgur.com/UEq4O06.png[/img][/url]
-
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -69,4 +67,3 @@ Gun Turrets MKII, MKIII, MKIV, Traps MKII.
 [/list]
 </description>
 </ModMetaData>
-
