@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using RimWorld;
 using UnityEngine;
@@ -219,10 +220,17 @@ public static class Utils
     public static void EditPowerGenerationValue(string thingDefName, int newPowerGenerationAmount)
     {
         var thingDef = GetDefByDefName<ThingDef>(thingDefName);
-        if (thingDef != null)
+        if (thingDef == null)
         {
-            thingDef.comps.OfType<CompProperties_Power>().First().basePowerConsumption =
-                -Math.Abs(newPowerGenerationAmount);
+            return;
+        }
+
+        var fieldInfo = typeof(CompProperties_Power).GetField("basePowerConsumption",
+            BindingFlags.Instance | BindingFlags.NonPublic);
+        if (fieldInfo != null)
+        {
+            fieldInfo.SetValue(thingDef.comps.OfType<CompProperties_Power>().First(),
+                -Math.Abs(newPowerGenerationAmount));
         }
     }
 

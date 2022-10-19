@@ -1,4 +1,5 @@
-﻿using SquirtingElephant.Helpers;
+﻿using Mlie;
+using SquirtingElephant.Helpers;
 using UnityEngine;
 using Verse;
 
@@ -13,6 +14,7 @@ public class MoreSecuritySettings : Mod
     private const int MIN_SANDBAG_HP = 1;
     private const int MAX_SANDBAG_HP = 100000;
     public static MS_SettingsData Settings;
+    private static string currentVersion;
 
     public static TableData Table = new TableData(new Vector2(0f, 250f), new Vector2(10f, 10f),
         new[] { 150f, COL_WIDTH },
@@ -28,6 +30,8 @@ public class MoreSecuritySettings : Mod
     public MoreSecuritySettings(ModContentPack content) : base(content)
     {
         Settings = GetSettings<MS_SettingsData>();
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.MoreSecurity"));
     }
 
     /// <summary>
@@ -37,11 +41,20 @@ public class MoreSecuritySettings : Mod
     {
         var ls = new Listing_Standard();
         ViewRect = inRect.ContractedBy(10f);
-        ViewRect.height = 300f + (Settings.AllTurretSettings.Count * 50f);
+        ViewRect.height = 275f + (Settings.AllTurretSettings.Count * 50f);
         Widgets.BeginScrollView(inRect, ref ScrollPosition, ViewRect);
         ls.Begin(ViewRect);
 
-        ls.Label("MS_ResearchCosts".Translate());
+        var lastRect = ls.Label("MS_ResearchCosts".Translate());
+
+        if (currentVersion != null)
+        {
+            lastRect.y += 50f;
+            GUI.contentColor = Color.gray;
+            Widgets.Label(lastRect, "MS_CurrentModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
+        }
+
         ls.Gap(2);
 
         var bufferResearchCost_TrapsMKII = Settings.ResearchCost_TrapsMKII.ToString();
@@ -80,9 +93,10 @@ public class MoreSecuritySettings : Mod
 
         // Turrets.
         TurretSettings.CreateHeaders();
-        Settings.AllTurretSettings.ForEach(s => s.DoSettingsWindowContents(ls));
+        Settings.AllTurretSettings.ForEach(s => s.DoSettingsWindowContents(ref ls));
 
         MoreSecurityOnDefsLoaded.ApplySettingsToDefs();
+
 
         ls.End();
         Widgets.EndScrollView();

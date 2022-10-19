@@ -69,7 +69,7 @@ public class TurretSettings
         CostComponent = CostComponent_Default = costComponent;
     }
 
-    public void DoSettingsWindowContents(Listing_Standard ls)
+    public void DoSettingsWindowContents(ref Listing_Standard ls)
     {
         var rowRect = MoreSecuritySettings.Table.GetRowRect(SettingsRowIdx);
         var labelRect = MoreSecuritySettings.Table.GetFieldRect(0, SettingsRowIdx);

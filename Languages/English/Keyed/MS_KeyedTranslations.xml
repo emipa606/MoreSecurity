@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <MS_ModName>More Security</MS_ModName>
+  <MS_CurrentModVersion>Installed mod-version: {0}</MS_CurrentModVersion>
   <!-- Settings -->
   <MS_SettingsCategory>More Security</MS_SettingsCategory>
   <MS_ResearchCosts>Research Costs</MS_ResearchCosts>

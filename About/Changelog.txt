@@ -1,5 +1,9 @@
 # Changelog for MoreSecurity
 
+1.4.1 - Mod updated for 1.4 and passed autotests.
+Used DeepL to update translations for ChineseSimplified, French, German, Russian
+
+
 1.0.2.0 - Fixed the scrollview, thanks Taranchuk for the simple solution!
 
 
