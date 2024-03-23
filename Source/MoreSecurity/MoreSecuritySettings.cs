@@ -16,9 +16,9 @@ public class MoreSecuritySettings : Mod
     public static MS_SettingsData Settings;
     private static string currentVersion;
 
-    public static TableData Table = new TableData(new Vector2(0f, 250f), new Vector2(10f, 10f),
-        new[] { 150f, COL_WIDTH },
-        new[] { 36f, ROW_HEIGHT },
+    public static readonly TableData Table = new TableData(new Vector2(0f, 250f), new Vector2(10f, 10f),
+        [150f, COL_WIDTH],
+        [36f, ROW_HEIGHT],
         8, 7);
 
     private Vector2 ScrollPosition = Vector2.zero;
@@ -31,7 +31,7 @@ public class MoreSecuritySettings : Mod
     {
         Settings = GetSettings<MS_SettingsData>();
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.MoreSecurity"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     /// <summary>

@@ -2,16 +2,11 @@
 
 namespace SquirtingElephant.Helpers;
 
-public abstract class TableEntity
+public abstract class TableEntity(TableData tableData)
 {
-    protected readonly TableData TableData;
+    protected readonly TableData TableData = tableData;
 
     public string Name = string.Empty;
-
-    public TableEntity(TableData tableData)
-    {
-        TableData = tableData;
-    }
 
     /// <summary>
     ///     Please do not edit this outside of TableData. This value is calculated.

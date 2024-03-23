@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>Shot_TurretSniperMKII</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FireSniperMKII</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>24</min>
+          <max>30</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

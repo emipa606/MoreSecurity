@@ -101,11 +101,11 @@ public class MS_SettingsData : ModSettings
 
     public List<TurretSettings> AllTurretSettings
     {
-        get => _AllTurretSettings ?? new List<TurretSettings>
-        {
+        get => _AllTurretSettings ??
+        [
             ShotgunTurretSettings, FlameThrowerTurretSettings, HitechUraniumTurretSettings,
             UltraUraniumTurretSettings, HitechMinigunTurretMKISettings, HitechMinigunTurretMKIISettings
-        };
+        ];
         set => _AllTurretSettings = value;
     }
 

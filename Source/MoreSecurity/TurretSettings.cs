@@ -22,31 +22,32 @@ public class TurretSettings
     private const int MAX_COST = 100000;
 
     private static readonly string[] HEADER_TRANSLATION_KEYS =
-    {
+    [
         "MS_MaxHP", "MS_Beauty", "MS_StoppingPower", "MS_BulletSpeed", "MS_TurretBurstCooldownTime", "MS_CostSteel",
         "MS_CostComponent"
-    };
+    ];
+
+    public readonly int Beauty_Default;
+    public readonly string BulletDefName; // Def name of the bullet that this turret uses.
+    public readonly int BulletSpeed_Default;
+    public readonly float BurstCooldown_Default;
+    public readonly int CostComponent_Default;
+    public readonly int CostSteel_Default;
+    public readonly string DefName; // Def name of Turret itself.
+    public readonly int MaxHP_Default;
 
     private readonly int SettingsRowIdx;
+    public readonly float StoppingPower_Default;
+    public readonly string TranslationKey; // Keyed translation string.
     public int Beauty;
-    public int Beauty_Default;
-    public string BulletDefName; // Def name of the bullet that this turret uses.
     public string BulletDefName_Default;
     public int BulletSpeed;
-    public int BulletSpeed_Default;
     public float BurstCooldown;
-    public float BurstCooldown_Default;
     public int CostComponent;
-    public int CostComponent_Default;
     public int CostSteel;
-    public int CostSteel_Default;
-    public string DefName; // Def name of Turret itself.
     public string DefName_Default;
     public int MaxHP;
-    public int MaxHP_Default;
     public float StoppingPower;
-    public float StoppingPower_Default;
-    public string TranslationKey; // Keyed translation string.
 
     public string TranslationKey_Default;
 
@@ -56,7 +57,7 @@ public class TurretSettings
     {
         SettingsRowIdx = settingsRowIdx;
 
-        // This could/should be refactored but I have no time right now.
+        // This could/should be refactored, but I have no time right now.
         TranslationKey = TranslationKey_Default = translationKey;
         DefName = DefName_Default = defName;
         BulletDefName = BulletDefName_Default = bulletDefName;
