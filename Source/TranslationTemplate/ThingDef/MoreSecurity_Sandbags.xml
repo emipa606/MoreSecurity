@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: steel reinforced sandbags -->
+  <Sandbags_MKII.label>steel reinforced sandbags</Sandbags_MKII.label>
+  <!-- EN: Bags of locally-sourced dirt or sand held in place by strong steel rods. More durable than regular sandbags. -->
+  <Sandbags_MKII.description>Bags of locally-sourced dirt or sand held in place by strong steel rods. More durable than regular sandbags.</Sandbags_MKII.description>
+  <!-- EN: plasteel reinforced sandbags -->
+  <Sandbags_MKIII.label>plasteel reinforced sandbags</Sandbags_MKIII.label>
+  <!-- EN: Bags of locally-sourced dirt or sand held in place by plasteel rods. More durable than the steel reinforced sandbags. -->
+  <Sandbags_MKIII.description>Bags of locally-sourced dirt or sand held in place by plasteel rods. More durable than the steel reinforced sandbags.</Sandbags_MKIII.description>
+</LanguageData>

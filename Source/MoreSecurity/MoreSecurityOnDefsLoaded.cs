@@ -9,10 +9,6 @@ public class MoreSecurityOnDefsLoaded
     static MoreSecurityOnDefsLoaded()
     {
         ApplySettingsToDefs();
-
-#if debug
-            Log.Message("MS_ModName".Translate() + ": Settings applied");
-#endif
     }
 
     public static void ApplySettingsToDefs()

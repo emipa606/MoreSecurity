@@ -5,7 +5,7 @@ namespace SquirtingElephant.MoreSecurity;
 
 public class MS_SettingsData : ModSettings
 {
-    private readonly TurretSettings FlameThrowerTurretSettings = new TurretSettings(
+    private readonly TurretSettings FlameThrowerTurretSettings = new(
         2,
         "MS_FlamethrowerTurret",
         "SE_Turret_FlamethrowerTurret",
@@ -19,7 +19,7 @@ public class MS_SettingsData : ModSettings
         3
     );
 
-    private readonly TurretSettings HitechMinigunTurretMKIISettings = new TurretSettings(
+    private readonly TurretSettings HitechMinigunTurretMKIISettings = new(
         6,
         "MS_HitechMinigunTurretMKII",
         "HT_MinigunTurretMKII",
@@ -33,7 +33,7 @@ public class MS_SettingsData : ModSettings
         15
     );
 
-    private readonly TurretSettings HitechMinigunTurretMKISettings = new TurretSettings(
+    private readonly TurretSettings HitechMinigunTurretMKISettings = new(
         5,
         "MS_HitechMinigunTurretMKI",
         "HT_MinigunTurret",
@@ -47,7 +47,7 @@ public class MS_SettingsData : ModSettings
         10
     );
 
-    private readonly TurretSettings HitechUraniumTurretSettings = new TurretSettings(
+    private readonly TurretSettings HitechUraniumTurretSettings = new(
         3,
         "MS_HitechUraniumTurret",
         "Turret_SniperMKII",
@@ -61,7 +61,7 @@ public class MS_SettingsData : ModSettings
         12
     );
 
-    private readonly TurretSettings ShotgunTurretSettings = new TurretSettings(
+    private readonly TurretSettings ShotgunTurretSettings = new(
         1,
         "MS_ShotgunTurret",
         "SE_ShotgunTurret",
@@ -75,7 +75,7 @@ public class MS_SettingsData : ModSettings
         3
     );
 
-    private readonly TurretSettings UltraUraniumTurretSettings = new TurretSettings(
+    private readonly TurretSettings UltraUraniumTurretSettings = new(
         4,
         "MS_UltraUraniumTurret",
         "Turret_SniperMKIII",

@@ -13,7 +13,7 @@ public class TableRow : TableEntity
         SetFields(tableData);
     }
 
-    public List<TableField> Fields { get; } = new List<TableField>();
+    public List<TableField> Fields { get; } = new();
 
     public float Height
     {

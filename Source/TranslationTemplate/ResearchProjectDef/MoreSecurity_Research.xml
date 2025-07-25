@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Traps MKII -->
+  <MoreTrapsMKII.label>Traps MKII</MoreTrapsMKII.label>
+  <!-- EN: Build improved traps with more damage but at a much higher cost. -->
+  <MoreTrapsMKII.description>Build improved traps with more damage but at a much higher cost.</MoreTrapsMKII.description>
+  <!-- EN: gun Turrets MKII -->
+  <MoreTurretsMKII.label>gun Turrets MKII</MoreTurretsMKII.label>
+  <!-- EN: Produce more advanced automated gun turrets. -->
+  <MoreTurretsMKII.description>Produce more advanced automated gun turrets.</MoreTurretsMKII.description>
+  <!-- EN: gun Turrets MKIII -->
+  <MoreTurretsMKIII.label>gun Turrets MKIII</MoreTurretsMKIII.label>
+  <!-- EN: Produce hi-tech automated gun turrets. -->
+  <MoreTurretsMKIII.description>Produce hi-tech automated gun turrets.</MoreTurretsMKIII.description>
+  <!-- EN: Gun Turrets MKIV -->
+  <MoreTurretsMKIV.label>Gun Turrets MKIV</MoreTurretsMKIV.label>
+  <!-- EN: Produce ultra-tech automated gun turrets. -->
+  <MoreTurretsMKIV.description>Produce ultra-tech automated gun turrets.</MoreTurretsMKIV.description>
+</LanguageData>

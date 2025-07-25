@@ -15,7 +15,7 @@ public class TableField : TableEntity
 
     public TableRow Row { get; }
 
-    public static TableField Invalid => new TableField(null, null, null);
+    public static TableField Invalid => new(null, null, null);
 
     public void Update()
     {

@@ -16,7 +16,7 @@ public class MoreSecuritySettings : Mod
     public static MS_SettingsData Settings;
     private static string currentVersion;
 
-    public static readonly TableData Table = new TableData(new Vector2(0f, 250f), new Vector2(10f, 10f),
+    public static readonly TableData Table = new(new Vector2(0f, 250f), new Vector2(10f, 10f),
         [150f, COL_WIDTH],
         [36f, ROW_HEIGHT],
         8, 7);

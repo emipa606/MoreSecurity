@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: spike trap MKII -->
+  <TrapSpikeMKII.label>spike trap MKII</TrapSpikeMKII.label>
+  <!-- EN: Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forthm and strike the victim. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. Has 2.75x the damage and 3x the hitpoints and a bit less ugly compared to a regular trap but is 4x as expensive to build. -->
+  <TrapSpikeMKII.description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forthm and strike the victim. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm. Has 2.75x the damage and 3x the hitpoints and a bit less ugly compared to a regular trap but is 4x as expensive to build.</TrapSpikeMKII.description>
+</LanguageData>
