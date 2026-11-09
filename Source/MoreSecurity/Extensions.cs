@@ -4,13 +4,16 @@ namespace SquirtingElephant.Helpers;
 
 public static class Extensions
 {
-    public static Rect Add_X(this Rect r, float x)
+    extension(Rect r)
     {
-        return new Rect(r.x + x, r.y, r.width, r.height);
-    }
+        public Rect Add_X(float x)
+        {
+            return new Rect(r.x + x, r.y, r.width, r.height);
+        }
 
-    public static Rect Replace_Width(this Rect r, float width)
-    {
-        return new Rect(r.x, r.y, width, r.height);
+        public Rect Replace_Width(float width)
+        {
+            return new Rect(r.x, r.y, width, r.height);
+        }
     }
 }

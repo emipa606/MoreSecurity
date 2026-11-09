@@ -11,9 +11,9 @@ public class TableField : TableEntity
         Update();
     }
 
-    public TableColumn Column { get; }
+    private TableColumn Column { get; }
 
-    public TableRow Row { get; }
+    private TableRow Row { get; }
 
     public static TableField Invalid => new(null, null, null);
 

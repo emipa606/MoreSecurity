@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -19,7 +18,7 @@ public class TableData
     /// </summary>
     private bool PrivateUpdateEnabled = true;
 
-    public readonly bool UpdateEnabled = true;
+    private readonly bool UpdateEnabled = true;
 
     /// <summary>
     /// </summary>
@@ -72,9 +71,9 @@ public class TableData
     /// </summary>
     public List<TableColumn> Columns { get; } = [];
 
-    public List<TableRow> Rows { get; } = [];
+    private List<TableRow> Rows { get; } = [];
 
-    public Rect TableRect { get; private set; } = Rect.zero;
+    private Rect TableRect { get; set; } = Rect.zero;
 
     /// <summary>
     /// </summary>
@@ -105,7 +104,7 @@ public class TableData
             AddColumns(colWidth);
         }
 
-        AddColumns(colWidths.Last(), colCount - colWidths.Length);
+        AddColumns(colWidths[^1], colCount - colWidths.Length);
 
         // Add Rows.
         foreach (var rowHeight in rowHeights)
@@ -171,7 +170,7 @@ public class TableData
     /// <summary>
     ///     Please also call UpdateRowsAndFields() after changing any column through here.
     /// </summary>
-    public void UpdateColumns()
+    private void UpdateColumns()
     {
         var nextColStart_X = TableRect.x;
         foreach (var col in Columns)
@@ -181,7 +180,7 @@ public class TableData
         }
     }
 
-    public void UpdateRowsAndFields()
+    private void UpdateRowsAndFields()
     {
         var nextRowStart_Y = TableRect.y;
         foreach (var row in Rows)
@@ -195,7 +194,7 @@ public class TableData
     /// <summary>
     ///     Note: Will do nothing if <c>amount</c> is zero or less.
     /// </summary>
-    public void AddRow(float rowHeight, int amount = 1)
+    private void AddRow(float rowHeight, int amount = 1)
     {
         if (amount == 0)
         {
@@ -237,7 +236,7 @@ public class TableData
         AddRow(GetLastRowHeight(), rowIdx + 1 - Rows.Count);
     }
 
-    public TableField GetField(int colIdx, int rowIdx)
+    private TableField GetField(int colIdx, int rowIdx)
     {
         if (colIdx >= Columns.Count)
         {
@@ -251,7 +250,7 @@ public class TableData
 
     private float GetLastRowHeight()
     {
-        return Rows.Count > 0 ? Rows.Last().Height : DEFAULT_ROW_HEIGHT;
+        return Rows.Count > 0 ? Rows[^1].Height : DEFAULT_ROW_HEIGHT;
     }
 
     public Rect GetRowRect(int rowIdx)

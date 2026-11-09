@@ -6,4 +6,22 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="MoreSecurity/MoreSecurity.csproj" />
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/MS_KeyedTranslations.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/SoundDefs/">
+    <File Path="../1.7/Defs/SoundDefs/MoreTurrets_World_Oneshots_Weapons.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ResearchProjectDefs/">
+    <File Path="../1.7/Defs/ResearchProjectDefs/MoreSecurity_Research.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Buildings/">
+    <File Path="../1.7/Defs/ThingDefs_Buildings/MoreSecurity_Sandbags.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/MoreSecurity_Traps.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/MoreSecurity_Turrets_Base.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/MoreSecurity_Turrets.xml" />
+  </Folder>
 </Solution>

@@ -89,24 +89,22 @@ public class MS_SettingsData : ModSettings
         1
     );
 
-    private List<TurretSettings> _AllTurretSettings;
-
     public int ResearchCost_GunTurretMKII = 1250;
     public int ResearchCost_GunTurretMKIII = 6000;
     public int ResearchCost_GunTurretMKIV = 22000;
     public int ResearchCost_TrapsMKII = 1250;
+    public int SandbagMKIII_MaxHp = 1000;
 
     public int SandbagMKII_MaxHp = 675;
-    public int SandbagMKIII_MaxHp = 1000;
 
     public List<TurretSettings> AllTurretSettings
     {
-        get => _AllTurretSettings ??
+        get => field ??
         [
             ShotgunTurretSettings, FlameThrowerTurretSettings, HitechUraniumTurretSettings,
             UltraUraniumTurretSettings, HitechMinigunTurretMKISettings, HitechMinigunTurretMKIISettings
         ];
-        set => _AllTurretSettings = value;
+        set;
     }
 
     public override void ExposeData()

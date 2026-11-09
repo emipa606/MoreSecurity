@@ -4,7 +4,7 @@ using Verse;
 namespace SquirtingElephant.MoreSecurity;
 
 [StaticConstructorOnStartup] // This makes the static constructor get called AFTER defs are loaded.
-public class MoreSecurityOnDefsLoaded
+public static class MoreSecurityOnDefsLoaded
 {
     static MoreSecurityOnDefsLoaded()
     {

@@ -4,8 +4,6 @@ namespace SquirtingElephant.Helpers;
 
 public class TableColumn : TableEntity
 {
-    private float _Width;
-
     public TableColumn(TableData tableData, float width) : base(tableData)
     {
         Width = width;
@@ -13,17 +11,17 @@ public class TableColumn : TableEntity
 
     public float Width
     {
-        get => _Width;
-        set
+        get;
+        private set
         {
-            if (value == _Width)
+            if (value == field)
             {
                 return;
             }
 
             if (value > 0f)
             {
-                _Width = value;
+                field = value;
                 TableData.Update();
             }
             else

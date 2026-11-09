@@ -27,18 +27,18 @@ public class TurretSettings
         "MS_CostComponent"
     ];
 
-    public readonly int Beauty_Default;
+    private readonly int Beauty_Default;
     public readonly string BulletDefName; // Def name of the bullet that this turret uses.
-    public readonly int BulletSpeed_Default;
-    public readonly float BurstCooldown_Default;
-    public readonly int CostComponent_Default;
-    public readonly int CostSteel_Default;
+    private readonly int BulletSpeed_Default;
+    private readonly float BurstCooldown_Default;
+    private readonly int CostComponent_Default;
+    private readonly int CostSteel_Default;
     public readonly string DefName; // Def name of Turret itself.
-    public readonly int MaxHP_Default;
+    private readonly int MaxHP_Default;
 
     private readonly int SettingsRowIdx;
-    public readonly float StoppingPower_Default;
-    public readonly string TranslationKey; // Keyed translation string.
+    private readonly float StoppingPower_Default;
+    private readonly string TranslationKey; // Keyed translation string.
     public int Beauty;
     public string BulletDefName_Default;
     public int BulletSpeed;
@@ -112,13 +112,13 @@ public class TurretSettings
         }
     }
 
-    private void MakeTextFieldNumeric(Rect rect, ref int setting, int min, int max)
+    private static void MakeTextFieldNumeric(Rect rect, ref int setting, int min, int max)
     {
         var buffer = setting.ToString();
         Widgets.TextFieldNumeric(rect, ref setting, ref buffer, min, max);
     }
 
-    private void MakeTextFieldNumericFloat(Rect rect, ref float setting, float min, float max)
+    private static void MakeTextFieldNumericFloat(Rect rect, ref float setting, float min, float max)
     {
         var buffer = setting.ToString();
         Widgets.TextFieldNumeric(rect, ref setting, ref buffer, min, max);

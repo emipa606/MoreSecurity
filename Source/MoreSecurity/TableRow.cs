@@ -5,29 +5,27 @@ namespace SquirtingElephant.Helpers;
 
 public class TableRow : TableEntity
 {
-    private float _Height;
-
     public TableRow(TableData tableData, float height) : base(tableData)
     {
         Height = height;
         SetFields(tableData);
     }
 
-    public List<TableField> Fields { get; } = new();
+    public List<TableField> Fields { get; } = [];
 
     public float Height
     {
-        get => _Height;
-        set
+        get;
+        private set
         {
-            if (value == _Height)
+            if (value == field)
             {
                 return;
             }
 
             if (value > 0f)
             {
-                _Height = value;
+                field = value;
                 TableData.Update();
             }
             else

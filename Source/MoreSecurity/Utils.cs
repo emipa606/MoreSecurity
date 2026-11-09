@@ -56,10 +56,7 @@ public static class Utils
     public static void SetThingStat(string thingDefName, string statDefName, float newValue)
     {
         var def = GetDefByDefName<ThingDef>(thingDefName);
-        if (def != null)
-        {
-            def.statBases.Find(s => s.stat.defName == statDefName).value = newValue;
-        }
+        def?.statBases.Find(s => s.stat.defName == statDefName)?.value = newValue;
     }
 
     /// <summary>
@@ -130,7 +127,7 @@ public static class Utils
     {
         if (Current.Game == null || Current.Game.CurrentMap == null)
         {
-            return Enumerable.Empty<Building>();
+            return [];
         }
 
         return Current.Game.CurrentMap.listerBuildings.allBuildingsColonist.Where(b => b.def.defName == defName);
@@ -234,10 +231,7 @@ public static class Utils
     public static void SetWorkAmount(string recipeDefName, int newWorkAmount)
     {
         var rd = GetDefByDefName<RecipeDef>(recipeDefName);
-        if (rd != null)
-        {
-            rd.workAmount = newWorkAmount;
-        }
+        rd?.workAmount = newWorkAmount;
     }
 
     public static void SetYieldAmount(string recipeDefName, int newYieldAmount)
@@ -249,10 +243,7 @@ public static class Utils
     public static void SetResearchBaseCost(string researchDefName, int newResearchCost)
     {
         var rpd = GetDefByDefName<ResearchProjectDef>(researchDefName);
-        if (rpd != null)
-        {
-            rpd.baseCost = newResearchCost;
-        }
+        rpd?.baseCost = newResearchCost;
     }
 
     public static void SetThingMaxHp(string thingDefName, int newHP)
@@ -268,10 +259,7 @@ public static class Utils
     public static void SetThingTurretBurstCooldown(string thingDefName, float newTurretBurstCooldown)
     {
         var def = GetDefByDefName<ThingDef>(thingDefName);
-        if (def != null)
-        {
-            def.building.turretBurstCooldownTime = newTurretBurstCooldown;
-        }
+        def?.building.turretBurstCooldownTime = newTurretBurstCooldown;
     }
 
     public static void SetThingSteelCost(string thingDefName, int newSteelCost)
@@ -279,10 +267,7 @@ public static class Utils
         var def = GetDefByDefName<ThingDef>(thingDefName);
 
         var costDef = def?.costList.FirstOrDefault(c => c.thingDef == ThingDefOf.Steel);
-        if (costDef != null)
-        {
-            costDef.count = newSteelCost;
-        }
+        costDef?.count = newSteelCost;
     }
 
     public static void SetThingComponentCost(string thingDefName, int newComponentCost)
@@ -290,10 +275,7 @@ public static class Utils
         var def = GetDefByDefName<ThingDef>(thingDefName);
 
         var costDef = def?.costList.FirstOrDefault(c => c.thingDef == ThingDefOf.ComponentIndustrial);
-        if (costDef != null)
-        {
-            costDef.count = newComponentCost;
-        }
+        costDef?.count = newComponentCost;
     }
 
     public static void SetThingComponentSpacerCost(string thingDefName, int newComponentSpacerCost)
@@ -301,9 +283,6 @@ public static class Utils
         var def = GetDefByDefName<ThingDef>(thingDefName);
 
         var costDef = def?.costList.FirstOrDefault(c => c.thingDef == ThingDefOf.ComponentSpacer);
-        if (costDef != null)
-        {
-            costDef.count = newComponentSpacerCost;
-        }
+        costDef?.count = newComponentSpacerCost;
     }
 }
